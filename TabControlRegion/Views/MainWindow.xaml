@@ -5,6 +5,16 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding NavigateCommand}" CommandParameter="ViewA">Navigate A</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="ViewB">Navigate B</Button>
+        </StackPanel>
+
+        <TabControl Grid.Row="1" />
     </Grid>
 </Window>
