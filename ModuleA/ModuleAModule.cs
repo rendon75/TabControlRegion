@@ -14,7 +14,8 @@ namespace ModuleA
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            containerRegistry.RegisterForNavigation<ViewA>("ViewA");
+            containerRegistry.RegisterForNavigation<ViewB>("ViewB");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using TabControlRegion.Core;
+﻿using Prism.Regions;
+using TabControlRegion.Core;
 
 namespace ModuleA.ViewModels
 {
@@ -7,6 +8,11 @@ namespace ModuleA.ViewModels
         public ViewAViewModel()
         {
             Title = "View A";
+        }
+
+        public override bool IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return false;
         }
     }
 }
